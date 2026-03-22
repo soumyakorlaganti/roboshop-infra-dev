@@ -53,7 +53,7 @@ resource "aws_instance" "redis" {
   )
 }
 
-resource "terraform_data" "bootstrap_redis" {
+resource "terraform_data" "redis" {
   triggers_replace =  [
     aws_instance.redis.id
   ]
@@ -93,7 +93,7 @@ resource "aws_instance" "mysql" {
   )
 }
 
-resource "terraform_data" "bootstrap_mysql" {
+resource "terraform_data" "mysql" {
   triggers_replace =  [
     aws_instance.mysql.id
   ]
