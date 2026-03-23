@@ -72,8 +72,8 @@ resource "aws_iam_role" "rabbitmq" {
 
 resource "aws_iam_policy" "rabbitmq" {
   name        = local.rabbitmq_policy_name
-  description = "A policy for MySQL Ec2 instance"
-  policy      = templatefile("mysql-iam-policy.json", {
+  description = "A policy for Rabbitmq Ec2 instance"
+  policy      = templatefile("rabbitmq-iam-policy.json", {
                 environment = var.environment
   })
 }
