@@ -18,11 +18,4 @@ locals {
         for name in ["${var.project}","${var.environment}", "mysql"]: title(name)
     ])
 
-    rabbitmq_role_name = join("-", [
-        for name in ["${var.project}","${var.environment}", "rabbitmq"]: title(name)
-    ])
-    rabbitmq_policy_name = join("-", [
-        for name in ["${var.project}","${var.environment}", "rabbitmq"]: title(name)
-    ])
-
 }
